@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --primary-color: rgb(4, 45, 226);
+        --white-color: rgb(225, 225, 225);
+      }
+      body {
+        background: linear-gradient(to right, #80002b, #6a91ef);
+      }
+      body {
+        text-align: center;
+      }
+      #getBtn,
+      #ClearData {
+        margin: 15px;
+        padding: 15px;
+        background: var(--primary-color);
+        border: 5px solid var(--primary-color);
+        color: var(--white-color);
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-transform: uppercase;
+        transition: all ease-in-out 170ms;
+      }
+      #getBtn:hover,
+      #ClearData:hover {
+        color: var(--primary-color);
+        background: var(--white-color);
+      }
+      #content {
+        display: block;
+        border: 5px solid rgba(43, 43, 43, 0.453);
+        height: auto;
+        width: 26rem;
+        background: var(--white-color);
+        position: relative;
+        left: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transform: translateX(-50%);
+        height: 30rem;
+        overflow: scroll;
+      }
+      #content div {
+        display: block;
+        height: auto;
+        border-bottom: 2px solid grey;
+        display: flex;
+        flex-direction: column;
+      }
+      .user {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-between;
+        padding: 10px;
+        border: none !important;
+      }
+      .remove {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>FETCH API</h1>
+    <button id="getBtn">Get data</button>
+    <button id="ClearData">deleteData</button>
+    <div id="content"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>
